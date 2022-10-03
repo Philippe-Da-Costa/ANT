@@ -1,0 +1,133 @@
+
+Microsoft Windows [version 10.0.19044.2006]
+(c) Microsoft Corporation. Tous droits réservés.
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>dir
+ Le volume dans le lecteur E s’appelle ETUDE
+ Le numéro de série du volume est 62C7-E245
+
+ Répertoire de E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire
+
+28/10/2021  00:44    <DIR>          .
+28/10/2021  00:44    <DIR>          ..
+13/11/2018  12:46             4 827 20181113_demo_utilisation_ANT.txt
+24/10/2019  10:40             3 103 20191023_demo_simple.txt
+28/10/2021  00:44    <DIR>          ANCIEN
+11/06/2009  22:13               836 build.xml
+11/06/2009  22:13               836 build2.xml
+13/11/2018  11:14    <DIR>          r1
+13/11/2018  11:14    <DIR>          r2
+11/06/2009  22:13               836 toto.xml
+               5 fichier(s)           10 438 octets
+               5 Rép(s)  157 762 285 568 octets libres
+
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>type build.xml
+<?xml version="1.0" ?>
+<project name="monProjet" default="init" basedir=".">
+        <!-- Exemple de commentaires -->
+        <property name="projet.nom" value="mon_projet" />
+        <property name="projet.version" value="0.0.10" />
+        <!-- =================================================================== -->
+        <!-- Initialisation -->
+        <!-- =================================================================== -->
+        <target name="init">
+                <mkdir dir="${basedir}/r1" />
+                <mkdir dir="${basedir}/r2" />
+        </target>
+        <!-- =================================================================== -->
+        <!-- nettoyage -->
+        <!-- =================================================================== -->
+        <target name="clean">
+                <delete dir="${basedir}/r1" />
+                <delete dir="${basedir}/r2" />
+        </target>
+</project>
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>ant
+Buildfile: E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire\build.xml
+
+init:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>ant -help
+ant [options] [target [target2 [target3] ...]]
+Options:
+  -help, -h              print this message and exit
+  -projecthelp, -p       print project help information and exit
+  -version               print the version information and exit
+  -diagnostics           print information that might be helpful to
+                         diagnose or report problems and exit
+  -quiet, -q             be extra quiet
+  -silent, -S            print nothing but task outputs and build failures
+  -verbose, -v           be extra verbose
+  -debug, -d             print debugging information
+  -emacs, -e             produce logging information without adornments
+  -lib <path>            specifies a path to search for jars and classes
+  -logfile <file>        use given file for log
+    -l     <file>                ''
+  -logger <classname>    the class which is to perform logging
+  -listener <classname>  add an instance of class as a project listener
+  -noinput               do not allow interactive input
+  -buildfile <file>      use given buildfile
+    -file    <file>              ''
+    -f       <file>              ''
+  -D<property>=<value>   use value for given property
+  -keep-going, -k        execute all targets that do not depend
+                         on failed target(s)
+  -propertyfile <name>   load all properties from file with -D
+                         properties taking precedence
+  -inputhandler <class>  the class which will handle input requests
+  -find <file>           (s)earch for buildfile towards the root of
+    -s  <file>           the filesystem and use it
+  -nice  number          A niceness value for the main thread:
+                         1 (lowest) to 10 (highest); 5 is the default
+  -nouserlib             Run ant without using the jar files from
+                         ${user.home}/.ant/lib
+  -noclasspath           Run ant without using CLASSPATH
+  -autoproxy             Java1.5+: use the OS proxy settings
+  -main <class>          override Ant's normal entry point
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>dir
+ Le volume dans le lecteur E s’appelle ETUDE
+ Le numéro de série du volume est 62C7-E245
+
+ Répertoire de E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire
+
+28/10/2021  00:44    <DIR>          .
+28/10/2021  00:44    <DIR>          ..
+13/11/2018  12:46             4 827 20181113_demo_utilisation_ANT.txt
+24/10/2019  10:40             3 103 20191023_demo_simple.txt
+28/10/2021  00:44    <DIR>          ANCIEN
+11/06/2009  22:13               836 build.xml
+11/06/2009  22:13               836 build2.xml
+13/11/2018  11:14    <DIR>          r1
+13/11/2018  11:14    <DIR>          r2
+11/06/2009  22:13               836 toto.xml
+               5 fichier(s)           10 438 octets
+               5 Rép(s)  157 762 285 568 octets libres
+
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>ant -f build.xml clean
+Buildfile: E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire\build.xml
+
+clean:
+   [delete] Deleting directory E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_CrÚation_de_repertoire\r1
+   [delete] Deleting directory E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_CrÚation_de_repertoire\r2
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>ant
+Buildfile: E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire\build.xml
+
+init:
+    [mkdir] Created dir: E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_CrÚation_de_repertoire\r1
+    [mkdir] Created dir: E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_CrÚation_de_repertoire\r2
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+E:\15_ETUDE_JAVA__SS_Eclispe__ANT\065_DEMONSTRATION_ANT_Création_de_repertoire>

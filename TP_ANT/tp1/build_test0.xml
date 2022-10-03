@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="creer et supprimer" default="cree">
+
+    <target name="cree">
+        <mkdir dir="rep1" />
+    </target>
+
+    <target name="detruit">
+        <delete dir="rep1"/>
+    </target>
+</project>
