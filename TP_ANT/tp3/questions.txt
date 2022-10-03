@@ -1,0 +1,5 @@
+4) Copie des fichiers
+Ligne de commande : ant copie
+
+5) Suppression des fichiers
+Ligne de commande : ant clean
