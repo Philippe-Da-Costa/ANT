@@ -1,3 +1,0 @@
-Commandes :
-ant : pour creer les dossiers
-ant clean : pour supprimer les dossiers
