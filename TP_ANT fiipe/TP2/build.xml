@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="monProjet" default="init" basedir=".">
+    <!-- Exemple de comentaires -->
+    <property name="projet.nom" value="mon_projet"/>
+    <property name="projet.version" value="0.0.10"/>
+    <!-- Initialisation -->
+    <target name="init">
+        <echo message="Initialisation du projet ${projet.nom}"/>
+        <mkdir dir="${basedir}/r1"/>
+        <mkdir dir="${basedir}/r2"/>
+    </target>
+    <!-- nettoyage -->
+    <target name="clean">
+        <echo message="Initialisation du projet ${projet.nom}"/>
+        <delete dir="${basedir}/r1"/>
+        <delete dir="${basedir}/r2"/>
+        
+    </target>
+</project>
